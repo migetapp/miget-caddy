@@ -37,7 +37,7 @@ jobs:
       - name: Determine tags
         id: tags
         run: |
-          IMAGE="migetapp/miget-caddy"
+          IMAGE="miget/miget-caddy"
           if [[ "${{ github.ref_type }}" == "tag" ]]; then
             echo "tags=${IMAGE}:${{ github.ref_name }}" >> "$GITHUB_OUTPUT"
           else
